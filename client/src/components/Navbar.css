@@ -1,41 +1,19 @@
-/* Global Styles */
-body.dark {
+/* General styles */
+body {
   background-color: #1c1c1e;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
   margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-} /* Add this to push content below fixed navbar */
-body.light{
-  background-color: #f8e3e3;
-  color: #1c1c1e;
-}
-body.light .navbar {
-  background-color: rgba(150, 110, 110, 0.8);
-}
-
-body.dark .navbar {
-  background-color: rgba(28, 28, 30, 0.8);
-}
-
-.homeSection {
-  padding-top: 90px; /* Adjust based on navbar height */
-}
-section {
-  padding: 60px 20px;
-  min-height: 100vh;
-} /* Reuse previous Navbar styles */
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+} /* Modern Navbar */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(28, 28, 30, 0.6);
+  background: rgba(28, 28, 30, 0.6); /* glassmorphism */
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -51,7 +29,7 @@ section {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
-  color: #9f3e3e;
+  color: #f5f5f5;
   background: transparent;
   transition: all 0.3s ease;
   position: relative;

@@ -1,26 +1,32 @@
-import React from 'react'
-import {Link} from "react-router-dom"
+import React, { useContext } from 'react';
+import { Link } from "react-scroll";
+import { ThemeContext } from '../ThemeContext';
+import './Navbar.css'; 
 
 function Navbar() {
-  return (
-   <nav className="bg-gray-800 p-4 text-white">
-    <ul className='flex space-x-4'>
-        <li>
-            <Link to="/">Home</Link>
-        </li>
-        <li>
-            <Link to="/about">About</Link>
-        </li>
-        <li>
-            <Link to="/projects">Projects</Link>
-        </li>
-        <li>
-            <Link to="/">Contact</Link>
-        </li>
-    </ul>
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-   </nav>
-  )
+  return (
+    <nav className="navbar">
+      <button className='theme-toggle' onClick={toggleTheme}>
+        {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      </button>
+      <ul className="nav-links">
+        <li>
+          <Link to="home" smooth={true} duration={500} offset={-60}>Home</Link>
+        </li>
+        <li>
+          <Link to="about" smooth={true} duration={500} offset={-60}>About</Link>
+        </li>
+        <li>
+          <Link to="projects" smooth={true} duration={500} offset={-60}>Projects</Link>
+        </li>
+        <li>
+          <Link to="contact" smooth={true} duration={500} offset={-60}>Contact</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
